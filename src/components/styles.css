@@ -83,3 +83,9 @@ body {
 .signup-link a:hover {
   text-decoration: underline;
 }
+.error {
+  color: #e74c3c;
+}
+.succes {
+  color: rgb(47, 255, 61);
+}

@@ -30,7 +30,7 @@ export default function Form() {
         return;
       }
       if (value.length > 6) {
-        setErrorName("Ok!");
+        setErrorName(<p className="succes">Ok !</p>);
       }
     }
     if (name === "password") {
@@ -45,7 +45,7 @@ export default function Form() {
         return;
       }
       if (value.length > 6) {
-        setErrorPassword("Ok!");
+        setErrorPassword(<p className="succes">Ok !</p>);
       }
     }
     if (name === "email") {
@@ -53,7 +53,7 @@ export default function Form() {
         setErroremail("Email Valid!");
         return;
       } else {
-        setErroremail("Ok!");
+        setErroremail(<p className="succes">Ok !</p>);
       }
     }
     if (name === "phone") {
@@ -61,7 +61,7 @@ export default function Form() {
         setErrorphone("Phone Valid!");
         return;
       } else {
-        setErrorphone("Ok!");
+        setErrorphone(<p className="succes">Ok !</p>);
       }
     }
 
@@ -92,26 +92,26 @@ export default function Form() {
   };
   const renderValidationUserName = () => {
     if (errorName) {
-      return <p>{errorName}</p>;
+      return <p className="error">{errorName}</p>;
     }
     return null;
   };
   const renderValidationPassword = () => {
     if (errorPassword) {
-      return <p>{errorPassword}</p>;
+      return <p className="error">{errorPassword}</p>;
     }
     return null;
   };
 
   const renderValidationEmail = () => {
     if (errorEmail) {
-      return <p>{errorEmail}</p>;
+      return <p className="error">{errorEmail}</p>;
     }
     return null;
   };
   const renderValidationPhone = () => {
     if (errorPhone) {
-      return <p>{errorPhone}</p>;
+      return <p className="error">{errorPhone}</p>;
     }
     return null;
   };
