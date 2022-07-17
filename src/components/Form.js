@@ -20,7 +20,9 @@ export default function Form() {
     const { name, value } = event.target;
     if (name === "name") {
       if (value.length < 6) {
-        setErrorName("User Name should be less than 6 character");
+        setErrorName(
+          "User Name should be more 6 character and less than 10 character"
+        );
         return;
       }
       if (value.length > 10) {
@@ -33,7 +35,9 @@ export default function Form() {
     }
     if (name === "password") {
       if (value.length < 6) {
-        setErrorPassword("Password should be less than 6 character");
+        setErrorPassword(
+          "Password should be more 6 character and less than 10 character"
+        );
         return;
       }
       if (value.length > 10) {
@@ -80,7 +84,7 @@ export default function Form() {
       !form.password ||
       !form.cfpassword
     ) {
-      alert("Error!");
+      alert("Don't be empty!");
       return true;
     }
     e.preventDefault();
@@ -170,7 +174,6 @@ export default function Form() {
               onChange={handleChange}
               placeholder="Confirm password"
             />
-
             <small />
             <span />
           </div>
